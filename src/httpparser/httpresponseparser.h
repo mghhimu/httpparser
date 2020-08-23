@@ -46,6 +46,7 @@ private:
 
     ParseResult consume(Response &resp, const char *begin, const char *end)
     {
+        state = ResponseStatusStart;
         while( begin != end )
         {
             char input = *begin++;
