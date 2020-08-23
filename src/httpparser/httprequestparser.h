@@ -45,6 +45,7 @@ private:
 
     ParseResult consume(Request &req, const char *begin, const char *end)
     {
+        state = RequestMethodStart;
         while( begin != end )
         {
             char input = *begin++;
